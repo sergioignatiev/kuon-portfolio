@@ -9,10 +9,11 @@
         </h2>
         <br />
         <p class="lg:text-lg text-sm text-justify leading-6">
-          &nbsp;&nbsp;&nbsp;&nbsp; Aaron is a full-stacked developer focused on
-          <strong> VueJS and PHP Laravel </strong>. He also possess soft skills
-          to further enhance himself as a web developer with skills such as
-          communication skills, creativity, problem solving, and adaptability.
+          &nbsp;&nbsp;&nbsp;&nbsp; Сергей Игнатьев веб-девелопер с опытом в
+          <strong> VueJS и JS </strong>. Также он обладает мягкими навыками,
+          <strong> VueJS и JS </strong>. He also possess soft skills to further
+          enhance himself as a web developer with skills such as communication
+          skills, creativity, problem solving, and adaptability.
         </p>
       </div>
       <br />
@@ -498,7 +499,10 @@ export default {
   }
 
   #render input {
-    @apply w-20 rounded-lg border-2 border-pink-500;
+    width: 5rem;
+    border-radius: 0.5rem;
+    border-width: 2px;
+    border-color: rgb(236 72 153);
   }
 
   .rendered-contents * {

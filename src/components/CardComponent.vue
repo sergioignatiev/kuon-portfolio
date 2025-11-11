@@ -35,43 +35,34 @@
   </div>
 </template>
 
-<script>
-export default {
-	name: 'CardComponent',
-	props: {
-		title: {
-			type: String,
-			required: false,
-			default: null
-		},
-		image: {
-			type: String,
-			required: false,
-			default: null
-		},
-		argOne: {
-			type: String,
-			required: false,
-			default: null
-		},
-		argTwo: {
-			type: String,
-			required: false,
-			default: null
-		},
-		isParagraph: {
-			type: Boolean,
-			default: false
-		}
+<script setup>
+import { ref } from 'vue';
+
+const props = defineProps({
+	title: {
+		type: String,
+		default: null
 	},
-	data() {
-		return {
-			isHovering: false,
-			isClicked: false
-		};
+	image: {
+		type: String,
+		default: null
 	},
-	mounted() {}
-};
+	argOne: {
+		type: String,
+		default: null
+	},
+	argTwo: {
+		type: String,
+		default: null
+	},
+	isParagraph: {
+		type: Boolean,
+		default: false
+	}
+});
+
+const isHovering = ref(false);
+const isClicked = ref(false);
 </script>
 
 <style>
@@ -115,6 +106,7 @@ export default {
     border: 6px solid transparent;
     background-clip: content-box;
   }
+
   ::-webkit-scrollbar {
     width: 20px;
   }

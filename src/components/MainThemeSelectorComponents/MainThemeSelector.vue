@@ -29,7 +29,7 @@
   </Teleport>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 /* eslint-disable */
   import CardComponent from './MainThemeCardComponent.vue';
   // import { ref, onMounted } from 'vue';

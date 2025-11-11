@@ -13,10 +13,12 @@
         @updateWindowSize="setWindowWidth($event)"
         v-show="isThemeLoaded"
       />
+
       <ThreeJS
         v-if="isThemeLoaded && currentRouteName !== 'ngl'"
         :padding-value="paddingValue"
       />
+
       <div
         class="h-48 w-48"
         v-else-if="isThemeLoaded && currentRouteName === 'ngl'"

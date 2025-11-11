@@ -1,12 +1,10 @@
 <template>
   <section class="pt-2 navbar fixed w-full divCenter">
+    <!-- Desktop viewport -->
     <div class="2xl:flex flex-row py-3 px-3 hidden ml-20">
-      <!-- pc view port -->
-      <!-- old navbar tags xl:px-[20rem] lg:px-[14rem] md:px-[10rem] sm:px-[7rem] px-[5rem]  -->
-
       <div>
         <h1 class="text-4xl font-bold headers">
-          <router-link to="/" @click="scrollTop">Aaron</router-link>
+          <router-link to="/" @click="scrollTop">Сергей Игнатьев</router-link>
         </h1>
       </div>
       <div class="text-2xl inline-block px-10 pt-[0.4rem]">
@@ -17,40 +15,31 @@
             :key="index"
           >
             <button>
-              <router-link :to="value.route" @click="scrollTop">{{
-                value.title
-              }}</router-link>
+              <router-link :to="value.route" @click="scrollTop">
+                {{ value.title }}
+              </router-link>
             </button>
           </li>
         </ul>
       </div>
-      <!-- spacing -->
-      <div>
-        <div class="w-[30rem]"></div>
-      </div>
-      <!-- select theme icon && dropdown -->
+      <div><div class="w-[30rem]"></div></div>
       <div class="rightSide flex flex-row gap-4">
-        <!-- select theme icon -->
         <NavbarIcons :selected-icon="'themeSelector'" />
         <NavbarIcons :selected-icon="'gitSource'" />
-        <!-- drop down section  -->
       </div>
     </div>
 
-    <!-------------------------------------------------------------------------------------->
-
-    <!-- mobile viewport -->
+    <!-- Mobile viewport -->
     <div class="2xl:hidden flex flex-row py-3 items-center">
       <div>
         <h1 class="text-3xl font-bold sm:-ml-[0px]">
           <router-link to="/" @click="scrollTop" class="scroll-smooth">
-            Aaron
+            Сергей
           </router-link>
         </h1>
       </div>
 
       <div>
-        <!-- separator -->
         <div
           :style="
             windowWidth > 400
@@ -62,13 +51,11 @@
 
       <div class="rightSide flex flex-row gap-4">
         <div class="has-dpdn" v-if="windowWidth <= 1536">
-          <!-- select theme icon -->
           <NavbarIcons :selected-icon="'themeSelector'" />
         </div>
         <div class="has-dpdn" v-if="windowWidth <= 1536">
           <NavbarIcons :selected-icon="'gitSource'" />
         </div>
-        <!-- drop down section  -->
         <div class="has-dpdn">
           <NavbarIcons
             :selected-icon="'burgerMenu'"
@@ -85,116 +72,73 @@
   </section>
 </template>
 
-<script>
-import anime from 'animejs/lib/anime.es.js';
+<script setup>
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 import NavbarIcons from './MainNavbarComponents/NavbarIcons.vue';
 import MobileNavbarComponent from './MainNavbarComponents/NavbarMobileComponent.vue';
-import { computed, ref } from 'vue';
 
-export default {
-	components: {
-		NavbarIcons,
-		MobileNavbarComponent
-	},
+// Навигационные маршруты
+const webRoutes = [
+	{ title: 'Контакты', route: '/contact' },
+	{ title: 'Навыки', route: '/skills' },
+	{ title: 'Работы', route: '/work' }
+];
 
-	data() {
-		return {
-			windowWidth: window.innerWidth
-		};
-	},
+// Состояния
+const windowWidth = ref(window.innerWidth);
+const mobileDropdownNavigation = ref(false);
 
-	setup(props) {
-		const webRoutes = {
-			contact: {
-				title: 'Contact',
-				route: '/contact'
-			},
-			skills: {
-				title: 'Skills',
-				route: '/skills'
-			},
-			works: {
-				title: 'Works',
-				route: '/work'
-			}
-		};
+// Методы
+function scrollTop() {
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
+}
 
-		const mobileDropdownNavigation = ref(false);
+function showDropdownNavigation() {
+	mobileDropdownNavigation.value = true;
+}
 
-		const showDropdownNavigation = () => {
-			mobileDropdownNavigation.value = true;
-		};
+function hideDropdownNavigation() {
+	mobileDropdownNavigation.value = false;
+}
 
-		const hideDropdownNavigation = () => {
-			mobileDropdownNavigation.value = false;
-		};
+function onResize() {
+	windowWidth.value = window.innerWidth;
+}
 
-		const scrollTop = () => {
-			document.body.scrollTop = 0;
-			document.documentElement.scrollTop = 0;
-		};
+// Хуки
+onMounted(() => {
+	onResize();
+	window.addEventListener('resize', onResize);
+});
 
-		return {
-			webRoutes,
-			mobileDropdownNavigation,
-			showDropdownNavigation,
-			hideDropdownNavigation,
-			scrollTop
-		};
-	},
-
-	emits: ['updateWindowSize'],
-	mounted() {
-		this.onResize();
-
-		this.$nextTick(() => {
-			window.addEventListener('resize', this.onResize);
-		});
-	},
-
-	beforeDestroy() {
-		window.removeEventListener('resize', this.onResize);
-	},
-
-	methods: {
-		onResize() {
-			this.windowWidth = window.innerWidth;
-			this.$emit('updateWindowSize', this.windowWidth);
-		}
-	}
-};
+onBeforeUnmount(() => {
+	window.removeEventListener('resize', onResize);
+});
 </script>
 
 <style>
   .navbar {
-    /* background-color: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     z-index: 50;
     left: 50%;
     transform: translateX(-50%);
     transition: color 500ms ease-in-out;
-    /* box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1); */
   }
 
   .navbar > * {
     transition: color 500ms ease-in-out;
   }
-  /* || drop down on focus  */
-  /* ======================================================================= */
+
   .dpdn {
-    /* positions  */
     position: absolute;
     opacity: 0;
     z-index: 40;
     visibility: hidden;
-
-    /* typology */
     background-color: var(--bg-sel);
     color: var(--text);
-
     transition: opacity 0.15s ease-out;
-
     backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(50px);
   }
@@ -205,8 +149,6 @@ export default {
     visibility: visible;
   }
 
-  /* || drop down text underline animation */
-  /* ======================================================================= */
   .dpdn_item {
     color: var(--text);
     display: inline-block;
@@ -231,13 +173,11 @@ export default {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
-  /* ======================================================================= */
 
   .navbar_burger {
     background-color: var(--text);
   }
-  /* || SVG icons  */
-  /* ======================================================================= */
+
   .svg_border {
     border-color: var(--text);
   }
@@ -245,14 +185,12 @@ export default {
   .svgColor {
     filter: var(--svg-color);
   }
-  /* ======================================================================= */
 
   html {
     scroll-behavior: smooth;
   }
 
   .router-link-exact-active {
-    /* color: white; */
     font-weight: bold;
     text-decoration: underline;
     cursor: default;

@@ -9,7 +9,7 @@
     </div>
     <br />
     <div>
-      <h2 class="text-2xl font-bold underline underline-offset-1">Works</h2>
+      <h2 class="text-2xl font-bold underline underline-offset-1">Работы</h2>
     </div>
     <br />
     <div class="flex flex-col divCenter pt-5">
@@ -58,7 +58,7 @@
           </p>
           <br />
           <strong class="decoration-2 underline"
-            ><a :href="value.Github">View this project on Github</a>
+            ><a :href="value.Github">Посмотреть на Github</a>
           </strong>
           <div v-if="isInMobile" class="mt-3">
             <br />
@@ -81,13 +81,13 @@ import { ref } from 'vue';
 
 export default {
 	components: {
-		TagsComponent,
+		TagsComponent
 	},
 	data() {
 		return {
 			worksData: Works,
 			indexMaxLength: 0,
-			isInMobile: false,
+			isInMobile: false
 		};
 	},
 	setup() {
@@ -107,15 +107,15 @@ export default {
 			// remove cursor when finished
 			afterComplete: function (instance) {
 				instance.destroy();
-			},
+			}
 		})
-			.type('Here are a list of my personal projects!')
+			.type('Здесь мои персональные проекты!')
 			.go();
 
 		if (window.innerWidth < 1536) {
 			this.isInMobile = true;
 		}
-	},
+	}
 };
 </script>
 

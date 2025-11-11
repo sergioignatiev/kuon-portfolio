@@ -4,13 +4,12 @@
       <h2
         class="lg:text-2xl text-lg font-bold underline underline-offset-8 decoration-2"
       >
-        Get in touch
+        На Связи
       </h2>
       <br />
       <p class="lg:text-lg text-sm text-justify leading-6">
-        &nbsp;&nbsp;&nbsp;&nbsp; Have an idea you want it to become a reality? I
-        can make it happen for you! Don't feel hesitated to contact me, I will
-        be responding to your messages as soon as possible.
+        &nbsp;&nbsp;&nbsp;&nbsp; Есть идеи которые я могу воплотить? Не
+        стесняйтесь связаться со мной!
       </p>
     </section>
     <section
@@ -20,23 +19,26 @@
     </section>
     <section class="pt-5">
       <p class="lg:text-lg text-sm text-justify leading-6">
-        You can reach me by emailing me at
-        <strong>aaronlyn88@gmail.com</strong>. I will be able to reply to your
-        mail within 2 days of working days.
+        Вы можете связаться со мной по электронной почте:
+        <strong>sergioignatiev17@gmail.com</strong>. Я смогу ответить на ваше
+        письмо в течение 2 рабочих дней. Или в Телеграм:
+        <strong>@SerjioIgnatev</strong>
       </p>
     </section>
     <br />
     <section class="">
       <p class="lg:text-lg text-sm text-justify leading-6">
-        You can visit my
+        Вы можете посмотреть моё
         <strong class="underline"
-          ><router-link to="/work">portfolio</router-link></strong
+          ><router-link to="/work">портфолио</router-link></strong
         >
-        to view my works. Alternatively, you can visit my
+        чтобы увидеть мои работы. Также, вы можете посетить мой
         <strong class="underline"
-          ><a href="https://github.com/Kuon-dev">Github Profile</a></strong
+          ><a href="https://github.com/sergioignatiev"
+            >Github Profile</a
+          ></strong
         >
-        to view my projects posted on Github
+        чтобы увидеть мои проекты, размещенные на Github
       </p>
     </section>
     <section class="pt-10 hidden">

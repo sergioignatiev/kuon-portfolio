@@ -12,20 +12,17 @@
   </div>
 </template>
 
-<script>
-export default {
-	name: 'TagsComponent',
-	props: {
-		tagSettings: {
-			type: Array,
-			required: false,
-		},
-	},
-};
+<script setup>
+const props = defineProps({
+	tagSettings: {
+		type: Array,
+		default: () => []
+	}
+});
 </script>
 
 <style scoped>
-.tags:hover {
-  color: var(--text-highlight-2);
-}
+  .tags:hover {
+    color: var(--text-highlight-2);
+  }
 </style>

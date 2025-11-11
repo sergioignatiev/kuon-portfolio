@@ -14,12 +14,12 @@
           checkCurrentTheme !== value.Name
             ? {
                 backgroundColor: value.ColorScheme.bg,
-                color: value.ColorScheme.textHighlight,
+                color: value.ColorScheme.textHighlight
               }
             : {
                 backgroundColor: value.ColorScheme.bgSelector,
                 color: value.ColorScheme.textHighlight,
-                fontWeight: 700,
+                fontWeight: 700
               }
         "
       >
@@ -33,7 +33,7 @@
 
 <script setup>
 import Themes from './Themes.json';
-import { ref, computed, watchEffect } from 'vue';
+import { ref } from 'vue';
 
 const themesData = Themes;
 
@@ -52,7 +52,7 @@ const previewTheme = (theme) => {
 		text: ColorScheme.text,
 		tiCursorColor: ColorScheme.tiCursorColor,
 		textHighlight: ColorScheme.textHighlight,
-		textHighlightAlt: ColorScheme.textHighlightAlt,
+		textHighlightAlt: ColorScheme.textHighlightAlt
 	};
 };
 
@@ -68,18 +68,18 @@ const selectTheme = (theme) => {
 </script>
 
 <style>
-.theme-selector-card-component {
-  background-color: var(--bg-sel);
-  color: var(--text);
-}
+  .theme-selector-card-component {
+    background-color: var(--bg-sel);
+    color: var(--text);
+  }
 
-.palette {
-  --bg: v-bind('setTheme.bg');
-  --bg-sel: v-bind('setTheme.bgSelector');
-  --svg-color: v-bind('setTheme.svgColor');
-  --text: v-bind('setTheme.text');
-  --ti-cursor-color: v-bind('setTheme.tiCursorColor');
-  --text-highlight: v-bind('setTheme.textHighlight');
-  --text-highlight-2: v-bind('setTheme.textHighlightAlt');
-}
+  .palette {
+    --bg: v-bind('setTheme.bg');
+    --bg-sel: v-bind('setTheme.bgSelector');
+    --svg-color: v-bind('setTheme.svgColor');
+    --text: v-bind('setTheme.text');
+    --ti-cursor-color: v-bind('setTheme.tiCursorColor');
+    --text-highlight: v-bind('setTheme.textHighlight');
+    --text-highlight-2: v-bind('setTheme.textHighlightAlt');
+  }
 </style>

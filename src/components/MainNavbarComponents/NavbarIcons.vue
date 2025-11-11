@@ -15,7 +15,7 @@
     </div>
 
     <div v-else-if="selectedIcon === 'burgerMenu'">
-      <button class="">
+      <button>
         <div class="border-2 rounded-md p-[0.48rem] svg_border -mt-[1px]">
           <div class="h-[0.15rem] w-[1.5rem] navbar_burger"></div>
           <div class="h-[0.15rem] w-[1.5rem] navbar_burger mt-2"></div>
@@ -27,7 +27,7 @@
     <div v-else-if="selectedIcon === 'gitSource'">
       <button
         class="border-2 rounded-md p-[0.35rem] svg_border"
-        onclick="window.open('https://github.com/Kuon-dev/kuon-portfolio/tree/main');"
+        @click="openGitHub"
       >
         <img
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
@@ -49,58 +49,47 @@
   </div>
 </template>
 
-<script>
-import { ref, watch } from 'vue';
+<script setup>
+import { ref } from 'vue';
+import { defineProps } from 'vue';
 import MainThemeSelector from '../MainThemeSelectorComponents/MainThemeSelector.vue';
 
-export default {
-	props: {
-		selectedIcon: {
-			type: String,
-			required: false,
-			default: null,
-		},
-	},
+const props = defineProps({
+	selectedIcon: {
+		type: String,
+		required: false,
+		default: null
+	}
+});
 
-	components: {
-		MainThemeSelector,
-	},
+const svgSource = './assets/theme.svg';
+const isShowingThemeOverlay = ref(false);
 
-	setup(props) {
-		const svgSource = './assets/theme.svg';
+function toggleThemeOverlay() {
+	isShowingThemeOverlay.value = !isShowingThemeOverlay.value;
+}
 
-		const isShowingThemeOverlay = ref(false);
+function closeThemeOverlay() {
+	isShowingThemeOverlay.value = false;
+}
 
-		const toggleThemeOverlay = () => {
-			isShowingThemeOverlay.value = !isShowingThemeOverlay.value;
-		};
-
-		const closeThemeOverlay = () => {
-			isShowingThemeOverlay.value = false;
-		};
-
-		return {
-			svgSource,
-			toggleThemeOverlay,
-			isShowingThemeOverlay,
-			closeThemeOverlay,
-		};
-	},
-};
+function openGitHub() {
+	window.open('https://github.com/Kuon-dev/kuon-portfolio/tree/main');
+}
 </script>
 
-<style>
-.slide-fade-enter-active {
-  transition: all 0.3s ease-out;
-}
+<style scoped>
+  .slide-fade-enter-active {
+    transition: all 0.3s ease-out;
+  }
 
-.slide-fade-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
-}
+  .slide-fade-leave-active {
+    transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+  }
 
-.slide-fade-enter-from,
-.slide-fade-leave-to {
-  transform: translateX(20px);
-  opacity: 0;
-}
+  .slide-fade-enter-from,
+  .slide-fade-leave-to {
+    transform: translateX(20px);
+    opacity: 0;
+  }
 </style>

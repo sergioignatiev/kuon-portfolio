@@ -9,22 +9,25 @@
       ></p>
     </div>
     <section class="">
-      <h1 class="text-4xl font-bold">Aaron Lyn</h1>
-      <h3 class="text-lg">Professional web developer</h3>
+      <h1 class="text-4xl font-bold">Сергей Игнатьев</h1>
+      <h3 class="text-lg">Фронтенд разработчик</h3>
     </section>
     <section class="pt-2">
       <h2
         class="lg:text-2xl text-lg font-bold underline underline-offset-8 decoration-2"
       >
-        Professional background
+        Профессиональная информация
       </h2>
       <br />
       <p class="lg:text-lg text-sm text-justify leading-6">
-        &nbsp;&nbsp;&nbsp;&nbsp; Professional junior web developer capable
-        professional looking and user-friendly websites from stratch and writes
-        <strong>performance optimized, reusable and refactorable codes</strong>.
-        Professionally developed 5 web applications with multiple Javascript
-        frameworks.
+        &nbsp;&nbsp;&nbsp;&nbsp; Профессиональный младший веб-разработчик,
+        способный разрабатывать профессионально выглядящие и удобные для
+        пользователя веб-сайты с нуля и писать
+        <strong
+          >оптимизированный по производительности, переиспользуемый и
+          рефакторируемый код</strong
+        >. Профессионально разработал 5 веб-приложений с использованием
+        нескольких JavaScript фреймворков.
       </p>
       <br />
       <p class="lg:text-lg text-sm text-justify leading-6">
@@ -87,7 +90,7 @@ import { ref } from 'vue';
 export default {
 	data() {
 		return {
-			display: false,
+			display: false
 		};
 	},
 	setup() {
@@ -106,26 +109,26 @@ export default {
 			// remove cursor when finished
 			afterComplete: function (instance) {
 				instance.destroy();
-			},
+			}
 		})
 			.type('Hello! I am a full stack web developer based in Malaysia.')
 			.go();
-	},
+	}
 };
 </script>
 
 <style>
-.selector {
-  background-color: var(--bg-sel);
-}
+  .selector {
+    background-color: var(--bg-sel);
+  }
 
-.copyright {
-  animation: fadeInLeft; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 1s; /* don't forget to set a duration! */
-  animation-delay: 3s;
-}
+  .copyright {
+    animation: fadeInLeft; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s; /* don't forget to set a duration! */
+    animation-delay: 3s;
+  }
 
-/* @keyframes copyright {
+  /* @keyframes copyright {
   0% {
     opacity: 0;
   }
