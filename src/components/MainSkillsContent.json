@@ -36,24 +36,8 @@
         "type": "backend",
         "technologies": [
             {
-                "title": "Python",
-                "image": "devicon-python-plain"
-            },
-            {
-                "title": "Node",
-                "image": "devicon-nodejs-plain"
-            },
-            {
-                "title": "Java",
-                "image": "devicon-java-plain"
-            },
-            {
-                "title": "MongoDB",
-                "image": "devicon-mongodb-plain"
-            },
-            {
-                "title": "Laravel",
-                "image": "devicon-laravel-plain"
+                "title": "Upstash-Redis",
+                "image": "devicon-redis-plain"
             }
         ]
     },
@@ -61,20 +45,8 @@
         "type": "tools",
         "technologies": [
             {
-                "title": "Markdown",
-                "image": "devicon-markdown-original"
-            },
-            {
-                "title": "Vim",
-                "image": "devicon-vim-plain"
-            },
-            {
                 "title": "Figma",
                 "image": "devicon-figma-plain"
-            },
-            {
-                "title": "Linux (Arch)",
-                "image": "devicon-linux-plain"
             }
         ]
     }

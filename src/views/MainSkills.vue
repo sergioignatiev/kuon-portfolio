@@ -5,15 +5,13 @@
         <h2
           class="lg:text-2xl text-lg font-bold underline underline-offset-8 decoration-2"
         >
-          Overview
+          Обзор
         </h2>
         <br />
         <p class="lg:text-lg text-sm text-justify leading-6">
           &nbsp;&nbsp;&nbsp;&nbsp; Сергей Игнатьев веб-девелопер с опытом в
-          <strong> VueJS и JS </strong>. Также он обладает мягкими навыками,
-          <strong> VueJS и JS </strong>. He also possess soft skills to further
-          enhance himself as a web developer with skills such as communication
-          skills, creativity, problem solving, and adaptability.
+          <strong> VueJS и JS </strong>. Я создаю современные, отзывчивые и
+          визуально привлекательные веб-приложения.
         </p>
       </div>
       <br />
@@ -22,7 +20,7 @@
       <h2
         class="lg:text-2xl text-lg font-bold underline underline-offset-8 decoration-2"
       >
-        My technology
+        Мои Технологии
       </h2>
       <SkillBarContent />
 

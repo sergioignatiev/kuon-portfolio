@@ -4,23 +4,15 @@
         "Title": "Bald-e commerce",
         "Description": "Интернет магазин Bald-e commerce, разработанный с использованием Nuxt.js для фронтенда и Laravel для бэкенда. Этот проект демонстрирует мои навыки в создании полнофункциональных веб-приложений электронной коммерции.",
         "Sidenote": "Первый проект с использованием Upstash Redis.",
-        "Github": "https://github.com/Kuon-dev/Shopify-Clone",
+        "Github": "https://github.com/sergioignatiev/educate",
         "Tags": ["Nuxt", "unoCss", "UpstashRedis", "TailwindCSS"]
     },
     {
-        "Image": "./assets/images/work2.png",
-        "Title": "Mersing Website with Chatbot",
-        "Description": "Mersing is a tourism spot located in West Malaysia, the purpose of this website is to boost the tourism industry of this location by making a AI Chatbot powered by Microsoft Virtual Agent ",
+        "Image": "./assets/images/vanlife.jpg",
+        "Title": "Vanlife Аренда автофургонов",
+        "Description": "Сайт по заказу аренды автофургонов Vanlife, разработанный с использованием Vue3 и TailwindCSS.",
         "Sidenote": "",
-        "Github": "https://github.com/Kuon-dev/IaI-project",
-        "Tags": ["Vue3", "TailwindCSS", "Microsoft Virtual Agent", "API"]
-    },
-    {
-        "Image": "./assets/images/work3.png",
-        "Title": "Paws Heaven E-commerce Website",
-        "Description": "Paws Heaven is an online E-commerce website developed by a team of 3 developers. Paws Heaven offers a variety of pet products such as food, vitamins and cages ",
-        "Sidenote": "",
-        "Github": "https://github.com/Kuon-dev/WDT-assignment",
-        "Tags": ["PHP", "HTML5", "CSS3", "MYSQL"]
+        "Github": "https://github.com/sergioignatiev/vanlife",
+        "Tags": ["Vue3", "TailwindCSS", "Vue-router"]
     }
 ]

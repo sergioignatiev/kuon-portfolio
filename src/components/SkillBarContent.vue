@@ -51,7 +51,7 @@ import Skills from './MainSkillsContent.json';
 import CardComponent from './CardComponent.vue';
 
 const skillData = Skills;
-const typeOfSkill = ['frontend', 'Мягкие Скиллы', 'tools'];
+const typeOfSkill = ['frontend', 'backend', 'tools'];
 
 const selectedTech = ref('');
 const selectedLang = ref('');

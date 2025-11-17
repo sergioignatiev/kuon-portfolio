@@ -63,8 +63,8 @@
       <div class="flex flex-col gap-2">
         <!-- year 2017 -->
         <p class="lg:text-lg text-sm text-justify">
-          <strong>2017:</strong>
-          &nbsp; Started journey on programming as a hobby
+          <strong>2021:</strong>
+          &nbsp; Начал изучать программирование как хобби.
         </p>
         <!-- year 2020 -->
         <p class="lg:text-lg text-sm text-justify">
@@ -111,7 +111,7 @@ export default {
 				instance.destroy();
 			}
 		})
-			.type('Hello! I am a full stack web developer based in Malaysia.')
+			.type('Приветствую.Я Фронтенд разработчик из Новороссийска.')
 			.go();
 	}
 };

@@ -74,7 +74,7 @@ function closeThemeOverlay() {
 }
 
 function openGitHub() {
-	window.open('https://github.com/Kuon-dev/kuon-portfolio/tree/main');
+	window.open('https://github.com/sergioignatiev');
 }
 </script>
 
