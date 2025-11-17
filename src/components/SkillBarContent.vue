@@ -51,7 +51,7 @@ import Skills from './MainSkillsContent.json';
 import CardComponent from './CardComponent.vue';
 
 const skillData = Skills;
-const typeOfSkill = ['frontend', 'backend', 'tools'];
+const typeOfSkill = ['Фронтенд', 'Бэкенд', 'Дизайн'];
 
 const selectedTech = ref('');
 const selectedLang = ref('');
@@ -59,13 +59,13 @@ const selectedLang = ref('');
 function selectTechnology(index) {
 	switch (index) {
 	case 0:
-		selectedTech.value = 'frontend';
+		selectedTech.value = 'Фронтенд';
 		break;
 	case 1:
-		selectedTech.value = 'backend';
+		selectedTech.value = 'Бэкенд';
 		break;
 	case 2:
-		selectedTech.value = 'tools';
+		selectedTech.value = 'Дизайн';
 		break;
 	}
 	setDefaultSelectLang(index);

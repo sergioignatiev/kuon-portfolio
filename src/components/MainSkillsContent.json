@@ -1,6 +1,6 @@
 [
     {
-        "type": "frontend",
+        "type": "Фронтенд",
         "technologies": [
             {
                 "title": "Nuxt",
@@ -33,7 +33,7 @@
         ]
     },
     {
-        "type": "backend",
+        "type": "Бэкенд",
         "technologies": [
             {
                 "title": "Upstash-Redis",
@@ -42,7 +42,7 @@
         ]
     },
     {
-        "type": "tools",
+        "type": "Дизайн",
         "technologies": [
             {
                 "title": "Figma",
