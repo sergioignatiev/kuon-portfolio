@@ -11,8 +11,20 @@
                 "image": "devicon-vuejs-plain"
             },
             {
+                "title": "React",
+                "image": "devicon-react-original"
+            },
+            {
                 "title": "GitHub",
                 "image": "devicon-github-original"
+            },
+            {
+                "title": "Git",
+                "image": "devicon-git-plain"
+            },
+            {
+                "title": "TypeScript",
+                "image": "devicon-typescript-plain"
             },
             {
                 "title": "Javascript (ES6)",

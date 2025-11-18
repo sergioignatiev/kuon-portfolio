@@ -32,9 +32,10 @@
       <br />
       <p class="lg:text-lg text-sm text-justify leading-6">
         <!-- &nbsp;&nbsp;&nbsp;&nbsp; -->
-        Hungry for knowledge, collaborative individual and possess analytical
-        skills. Enjoys problem solving and willing to adapt to changes in the
-        industry to stay on top.
+        Люблю создавать красивые, современные и отзывчивые веб-сайты с
+        использованием передовых технологий и лучших практик. Моя цель - помочь
+        клиентам достичь их целей, предоставляя высококачественные решения для
+        веб-разработки, которые превосходят ожидания.
       </p>
     </section>
     <!-- info section -->
@@ -46,10 +47,9 @@
       </h2>
       <br />
       <p class="lg:text-lg text-sm text-justify leading-6">
-        &nbsp;&nbsp;&nbsp;&nbsp; Aaron has a strong passion on technology and
-        computers. Outside of programmimg, Aaron has a hobby of collecting and
-        engage with technology. He likes to tinker with his Arch Linux Operating
-        System and enjoys collecting custom keyboards.
+        &nbsp;&nbsp;&nbsp;&nbsp; Фронтенд разработчик из Новороссийска, Россия.
+        В свободное время люблю изучать новые технологии,и языки, владею
+        Английским на продвинутом уровне, и Испанским на начальном.
       </p>
     </section>
     <!-- journey section -->
@@ -69,7 +69,7 @@
         <!-- year 2020 -->
         <p class="lg:text-lg text-sm text-justify">
           <strong>2022:</strong>
-          &nbsp; Выучил React и начал делать сайты на фрилансе
+          &nbsp; Выучил React и начал делать сайты на фрилансе.
         </p>
         <!-- year 2022  -->
         <p class="lg:text-lg text-sm text-justify">
