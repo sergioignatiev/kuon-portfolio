@@ -42,7 +42,7 @@
       <h2
         class="lg:text-2xl text-lg font-bold underline underline-offset-8 decoration-2"
       >
-        Bio
+        Личная информация
       </h2>
       <br />
       <p class="lg:text-lg text-sm text-justify leading-6">
@@ -57,7 +57,7 @@
       <h2
         class="lg:text-2xl text-lg font-bold underline underline-offset-8 decoration-2"
       >
-        Journey
+        Опыт
       </h2>
       <br />
       <div class="flex flex-col gap-2">
@@ -68,14 +68,14 @@
         </p>
         <!-- year 2020 -->
         <p class="lg:text-lg text-sm text-justify">
-          <strong>2020:</strong>
-          &nbsp; Enrolled for diploma of ICT with specalism in software
-          engineering
+          <strong>2022:</strong>
+          &nbsp; Выучил React и начал делать сайты на фрилансе
         </p>
         <!-- year 2022  -->
         <p class="lg:text-lg text-sm text-justify">
-          <strong>2022:</strong>
-          &nbsp; Started journey on web development
+          <strong>2024:</strong>
+          &nbsp; Начал работать с Vue и Nuxt.js, углубился в фронтенд разработку
+          и сделал несколько коммерческих проектов.
         </p>
       </div>
     </section>
